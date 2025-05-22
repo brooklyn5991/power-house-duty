@@ -1,0 +1,109 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  margin: 0;
+}
+
+input[type="number"] {
+  padding: 0.5rem;
+  width: 100%;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  padding: 0.5rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  margin-top: 2rem;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.toggle {
+  background: none;
+  color: #007bff;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dark mode */
+.container.dark {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.container.dark input,
+.container.dark button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+.container.dark button:hover {
+  background-color: #555;
+}
+
+.container.dark .toggle {
+  color: #ffcc00;
+}
+
+/* Loader */
+.loader {
+  margin: 2rem auto;
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.container.dark .loader {
+  border: 5px solid #444;
+  border-top: 5px solid #ffcc00;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
